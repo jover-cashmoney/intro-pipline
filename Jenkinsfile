@@ -8,13 +8,11 @@ pipeline {
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
       }
-      
-      stage('Shared Lib') {
+     stage('Shared Lib') {
          steps {
              helloWorld("Jenkins")
          }
-      }
-      
+      }  
     }
   }
   environment {
