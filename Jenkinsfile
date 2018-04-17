@@ -1,3 +1,4 @@
+library 'SharedLibs'
 pipeline {
   agent any
   stages {
@@ -7,6 +8,13 @@ pipeline {
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
       }
+      
+      stage('Shared Lib') {
+         steps {
+             helloWorld("Jenkins")
+         }
+      }
+      
     }
   }
   environment {
